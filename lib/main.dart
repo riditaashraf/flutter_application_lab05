@@ -1,39 +1,39 @@
+import 'package: flutter/material.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
+
 
 void main() {
-  runApp(const AppHome());
+  
+  runApp(MyHome());
+  runApp(const MyHome());
+
 }
+class MyHome extends StatelessWidget{
 
-class MyHome extends StatelessWidget {
-          appBar:Appbar (
-            Title: Text("This is lab05"),
+class MyHome extends StatelessWidget{
+  const MyHome({super.key});
 
-          ) //Appbar
-          body: Text("This is Body"),
-          body: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-           children:[
-            Icon(
-              size: 40,
-              Iconsax.activity4,
-              color: Colors.blue,
-            ),
-            Icon(
-              size: 40,
-              iconsax.activity4,
-              color: Colors.blue,
-            ),
-            Text(
-              "This is a",
-              style: TextStyle(
-                clor: Colors.amber,
-                fontsize: 60,
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+     home: Scaffold(
+      appBar: AppBar(
+        title: Text("First project image"),
+        centerTitle: true,
+        elevation: 3.5,
+      ),
+    body: Container(
+      color: Colors.blue,
+      padding: EdgeInsets.all(20),
+      margin:EdgeInsets.al(40) ,
+      alignment: Alignment.center,
+      decoration:BoxDecoration(
+        image: DecorationImage(image: AssetImage('images/shoe.jpeg'))
+      ),
 
-              ),
-            )
-           ],
-          ),
-  ),
-);
+    ),
+     ),
+    );
+  }
+}
 }
